@@ -19,7 +19,7 @@
     width: 100%;
     height: 100vh;
     z-index: 99999999;
-    background: url('loaderLogo.webp'); /* your icon gif file path */
+    background: url('Images/logo.png'); /* your icon gif file path */
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
