@@ -41,7 +41,7 @@ Well, take a chill pill. Don't be intimidated by these thoughts. __Apna Theatre 
 <div>
 <img src="Images\Logo/logo1.png" height = "120" align = "left"/>
 <div>
-ApnaTheatre.com is a place for all movieholics & cinephiles to enjoy. This movie streaming website allows users to watch their favorite movies, tv shows, and web series from multiple genres like Crime, Comedy, Drama, Documentaries, Horror, Anime, Romance, War, Action, Fantasy, Kids and many more! </div>
+Cine.com is a place for all movieholics & cinephiles to enjoy. This movie streaming website allows users to watch their favorite movies, tv shows, and web series from multiple genres like Crime, Comedy, Drama, Documentaries, Horror, Anime, Romance, War, Action, Fantasy, Kids and many more! </div>
 </div>
 <br>
 
