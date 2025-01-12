@@ -14,6 +14,30 @@
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome To Cine</title>
+    <style>
+      #cookieConsent {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f4f4f4;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+      }
+      #cookieConsent button {
+        margin-left: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #cookieConsent button:hover {
+        background-color: #0056b3;
+      }
+    </style>
     <link
       rel="shortcut icon"
       href="./Images/logo.png"
@@ -49,7 +73,7 @@
           <h1>WELCOME TO<br /><span>Cine</span></h1>
           <p>Stream your favourite movies online.</p>
         </div>
-        <a href="#" class="button" onclick="myFunction()">Login</a>
+        <a href="home.html" class="button" onclick="myFunction()">Login</a>
       </div>
       <div class="bottom-text-container1">
         <div class="bottom-text-container">
@@ -286,10 +310,36 @@
       </marquee>
     </div>
 
+    <div id="cookieConsent">
+      <p>
+        We use cookies to enhance your experience and analyze our traffic. By clicking "Accept", you consent to the use of cookies. 
+        <a href="privacy-policy.html">Learn More</a>.
+        <button onclick="acceptCookies()">Accept</button>
+        <button onclick="declineCookies()">Decline</button>
+      </p>
+    </div>
+
     <script>
-      function myFunction() {
-        location.replace("login.html");
-      }
+      // Function to handle cookie acceptance
+  function acceptCookies() {
+    document.getElementById('cookieConsent').style.display = 'none';
+    document.cookie = "userConsent=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT;";
+    // Redirect to home page if needed
+    location.replace("home.html");
+  }
+
+  // Function to handle cookie decline
+  function declineCookies() {
+    document.getElementById('cookieConsent').style.display = 'none';
+    alert("You have declined cookies. Some features may not work.");
+  }
+
+  // Check if user already gave consent
+  window.onload = function () {
+    if (document.cookie.indexOf("userConsent=true") !== -1) {
+      document.getElementById('cookieConsent').style.display = 'none';
+    }
+  };
     </script>
 
     <script>
