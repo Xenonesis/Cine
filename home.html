@@ -306,30 +306,28 @@
 
 <script type="text/javascript">
   function openMovieWin() {
-    // Define movie link
+    // Define the movie URL
     const movieUrl = "https://mxdrop.to/e/wlpxdx67twmmqw";
 
-    // Detect if the user is on a mobile device
+    // Check if the user is on a mobile device
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    // Set dimensions for mobile or desktop
-    let width = isMobile ? screen.width * 0.9 : 600; // 90% width for mobile
-    let height = isMobile ? screen.height * 0.8 : 400; // 80% height for mobile
-
-    // Calculate position to center the window
-    let left = (screen.width - width) / 2;
-    let top = (screen.height - height) / 2;
+    // Set dimensions for the popup
+    const width = isMobile ? screen.width * 0.95 : 600; // 95% width for mobile
+    const height = isMobile ? screen.height * 0.9 : 400; // 90% height for mobile
+    const left = isMobile ? 0 : (screen.width - width) / 2;
+    const top = isMobile ? 0 : (screen.height - height) / 2;
 
     // Open the movie link in a new window
     const newWindow = window.open(
       movieUrl,
       "_blank",
-      `width=${width},height=${height},top=${top},left=${left},channelmode=no,fullscreen=no,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,resizable=no`
+      `width=${width},height=${height},top=${top},left=${left},menubar=no,toolbar=no,location=no,status=no,scrollbars=no,resizable=yes`
     );
 
-    // Fallback if the window couldn't be opened (e.g., pop-up blocked)
+    // Check if the popup was blocked
     if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
-      alert("Pop-up blocked! Please allow pop-ups for this site to view the movie.");
+      alert("Popup blocked! Please allow popups for this site.");
     }
   }
 </script>
