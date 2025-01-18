@@ -302,12 +302,38 @@
                  <!-- </form> -->
                   <br>
                   <br>
-                  <button class="btn_i b4_i" onclick="openMovieWin()">▶Play</button>
-                  <script type="text/javascript">
-                    function openMovieWin(){
-                      window.open("https://odysee.com/Black.Mirror.S06E01.Joan.Is.Awful.1080p:5","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
-                    }
-                  </script>
+                  <button class="btn_i b4_i" onclick="openMovieWin()">▶ Play</button>
+
+<script type="text/javascript">
+  function openMovieWin() {
+    // Define movie link
+    const movieUrl = "https://mxdrop.to/e/wlpxdx67twmmqw";
+
+    // Detect if the user is on a mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    // Set dimensions for mobile or desktop
+    let width = isMobile ? screen.width * 0.9 : 600; // 90% width for mobile
+    let height = isMobile ? screen.height * 0.8 : 400; // 80% height for mobile
+
+    // Calculate position to center the window
+    let left = (screen.width - width) / 2;
+    let top = (screen.height - height) / 2;
+
+    // Open the movie link in a new window
+    const newWindow = window.open(
+      movieUrl,
+      "_blank",
+      `width=${width},height=${height},top=${top},left=${left},channelmode=no,fullscreen=no,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,resizable=no`
+    );
+
+    // Fallback if the window couldn't be opened (e.g., pop-up blocked)
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
+      alert("Pop-up blocked! Please allow pop-ups for this site to view the movie.");
+    }
+  }
+</script>
+
               </div>
             </div>
             <div class="flim">
